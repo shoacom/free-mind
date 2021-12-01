@@ -1,0 +1,22 @@
+{
+    "name": "FreeMind",
+    "description": "Deploy FreeMind on Heroku.",
+    "keywords": ["FreeMind"],
+    "env": {
+        "ID": {
+            "description": "UUID",
+            "value": "581ab87c-5295-11ec-bf63-0242ac130002"
+        },
+        "AID": {
+            "description": "AlterID",
+            "value": "64"
+        },
+        "WSPATH": {
+            "description": "WebSocket Path",
+            "value": "/"
+        }
+    },
+    "website": "https://github.com/shoacom/",
+    "repository": "https://github.com/shoacom/free-mind",
+    "stack": "container"
+}

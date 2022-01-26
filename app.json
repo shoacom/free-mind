@@ -3,13 +3,17 @@
     "description": "Deploy FreeMind on Heroku.",
     "keywords": ["FreeMind"],
     "env": {
+        "PORT": {
+            "description": "PORT",
+            "value": "443"
+        },
         "ID": {
             "description": "UUID",
             "value": "581ab87c-5295-11ec-bf63-0242ac130002"
         },
         "AID": {
             "description": "AlterID",
-            "value": "64"
+            "value": "0"
         },
         "WSPATH": {
             "description": "WebSocket Path",

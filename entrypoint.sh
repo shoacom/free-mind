@@ -38,6 +38,6 @@ bash install-dat-release.sh
 
 cp ${DIR_TMP}/heroku.json ${DIR_CONFIG}/config.json
 
-sudo systemctl restart v2ray
-sudo systemctl status -l v2ray
-sudo systemctl enable v2ray
+systemctl restart v2ray
+systemctl status -l v2ray
+systemctl enable v2ray

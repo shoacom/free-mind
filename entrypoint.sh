@@ -33,11 +33,9 @@ EOF
 curl -O https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh
 curl -O https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-dat-release.sh
 
-bash install-release.sh
-bash install-dat-release.sh
+./install-release.sh
+./install-dat-release.sh
 
 cp ${DIR_TMP}/heroku.json ${DIR_CONFIG}/config.json
 
-systemctl restart v2ray
-systemctl status -l v2ray
-systemctl enable v2ray
+/usr/local/bin/v2ray -config /usr/local/etc/v2ray/config.json

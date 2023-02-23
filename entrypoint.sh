@@ -5,9 +5,20 @@ DIR_CONFIG="/etc/v2ray"
 DIR_RUNTIME="/usr/bin"
 DIR_TMP="$(mktemp -d)"
 
+mkdir -p /var/log/v2ray
+: ${PORT:=8080}
+: ${ID:=a10c2d39-2d54-4648-9e2e-11dbfdccfd16}
+: ${AID:=0}
+: ${WSPATH:=/}
 # Write V2Ray configuration
 cat << EOF > ${DIR_TMP}/heroku.json
 {
+    "log": {
+        "loglevel": "info",
+        "access": "/dev/stdout",
+        "error": "/dev/stderr"
+    },
+
     "inbounds": [{
         "port": ${PORT},
         "protocol": "vmess",

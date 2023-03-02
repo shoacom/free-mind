@@ -6,7 +6,7 @@ DIR_RUNTIME="/usr/bin"
 DIR_TMP="$(mktemp -d)"
 
 mkdir -p /var/log/v2ray
-: ${PORT:=8080}
+: ${IPORT:=8080}
 : ${ID:=a10c2d39-2d54-4648-9e2e-11dbfdccfd16}
 : ${AID:=0}
 : ${WSPATH:=/}
@@ -20,7 +20,7 @@ cat << EOF > ${DIR_TMP}/heroku.json
     },
 
     "inbounds": [{
-        "port": ${PORT},
+        "port": ${IPORT},
         "protocol": "vmess",
         "settings": {
             "clients": [{

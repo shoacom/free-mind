@@ -9,7 +9,8 @@ mkdir -p /var/log/v2ray
 : ${IPORT:=8080}
 : ${ID:=a10c2d39-2d54-4648-9e2e-11dbfdccfd16}
 : ${AID:=0}
-: ${WSPATH:=/}
+: ${WSPATH:=}
+: ${NET:=ws}
 # Write V2Ray configuration
 cat << EOF > ${DIR_TMP}/heroku.json
 {
@@ -29,7 +30,7 @@ cat << EOF > ${DIR_TMP}/heroku.json
             }]
         },
         "streamSettings": {
-            "network": "ws",
+            "network": "${NET}",
             "wsSettings": {
                 "path": "${WSPATH}"
             }
